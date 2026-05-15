@@ -329,6 +329,13 @@ footer {
     transform: translateY(0);
 }
 
+.policy-footer {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #888;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hero-content h1 {
