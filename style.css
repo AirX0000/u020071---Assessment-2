@@ -458,6 +458,88 @@ footer {
     color: #888;
 }
 
+/* Advanced About Styles */
+.about-grid-collage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 5rem;
+}
+
+.collage-main {
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.collage-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.collage-side img {
+    height: 290px;
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin: 6rem 0;
+}
+
+.value-box {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.value-box:hover {
+    background: rgba(212, 175, 55, 0.05);
+    transform: translateY(-5px);
+}
+
+.value-box h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.value-box p {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.big-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    text-align: center;
+    margin: 8rem 0;
+    color: #fff;
+    position: relative;
+}
+
+.big-quote::before {
+    content: '"';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10rem;
+    color: var(--accent-color);
+    opacity: 0.1;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hero-content h1 {
