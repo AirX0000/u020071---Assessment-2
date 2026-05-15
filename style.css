@@ -40,7 +40,9 @@ h1, h2, h3 {
     align-items: center;
     padding: 2rem 5%;
     z-index: 1000;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    background: rgba(10, 10, 10, 0.1);
+    backdrop-filter: blur(20px); /* Glassmorphism */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition);
 }
 
@@ -49,6 +51,7 @@ h1, h2, h3 {
     letter-spacing: 4px;
     font-weight: 600;
     color: var(--accent-color);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .nav-links {
@@ -83,6 +86,7 @@ h1, h2, h3 {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    perspective: 1000px;
 }
 
 .hero-image-container {
@@ -91,13 +95,14 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
+    transform: scale(1.1); /* Subtle depth */
 }
 
 .hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.6);
+    filter: brightness(0.7) contrast(1.1);
 }
 
 .hero-overlay {
@@ -106,7 +111,7 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9));
 }
 
 .hero-content {
@@ -114,12 +119,15 @@ h1, h2, h3 {
     z-index: 10;
     max-width: 800px;
     padding: 0 20px;
+    transform: translateZ(50px); /* Lift from background */
 }
 
 .hero-content h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     margin-bottom: 1rem;
     font-style: italic;
+    text-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    letter-spacing: -2px;
 }
 
 .hero-content p {
@@ -149,6 +157,7 @@ h1, h2, h3 {
 /* Journal Section */
 .journal {
     padding: 8rem 10%;
+    background: radial-gradient(circle at 50% -10%, #1a1025 0%, #0a0a0a 60%); /* Added depth to background */
 }
 
 .section-title {
@@ -166,46 +175,64 @@ h1, h2, h3 {
 .section-title h2 {
     font-size: 3rem;
     margin-top: 0.5rem;
+    text-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .posts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4rem;
+    perspective: 1000px; /* For 3D effects */
 }
 
 .post-card {
-    background-color: var(--card-bg);
-    border-radius: 2px;
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px); /* Glassmorphism */
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 8px;
     overflow: hidden;
     transition: var(--transition);
     position: relative;
-    border-bottom: 2px solid transparent;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* Depth shadow */
 }
 
 .post-card:hover {
-    transform: translateY(-10px);
-    border-bottom-color: var(--accent-color);
+    transform: translateY(-15px) rotateX(2deg) rotateY(2deg); /* 3D Lift */
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.15); /* Golden glow shadow */
+    border-color: rgba(212, 175, 55, 0.4);
 }
 
 .post-img-wrapper {
     height: 400px;
     overflow: hidden;
+    position: relative;
+}
+
+.post-img-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(26, 26, 26, 1), transparent);
 }
 
 .post-img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.8s ease;
+    transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .post-card:hover .post-img-wrapper img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .post-info {
     padding: 2.5rem;
+    position: relative;
+    z-index: 2;
 }
 
 .category {
