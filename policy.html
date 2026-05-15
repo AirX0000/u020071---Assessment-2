@@ -7,26 +7,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .page-content { padding: 10rem 20%; max-width: 1000px; margin: 0 auto; text-align: center; }
-        .page-content h1 { font-size: 4rem; margin-bottom: 3rem; color: var(--accent-color); }
-        .page-content p { font-size: 1.2rem; margin-bottom: 2rem; color: #ccc; line-height: 1.8; }
         .policy-list { list-style: none; margin-top: 3rem; text-align: left; display: inline-block; }
         .policy-list li { margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--accent-color); letter-spacing: 1px; }
         .policy-list li span { color: #fff; }
-        .back-link { display: inline-block; margin-bottom: 3rem; color: var(--accent-color); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <div class="page-content">
-        <a href="index.html" class="back-link">← Back to Home</a>
-        <h1>Social Media Policy</h1>
-        <p>At Sagittarius Muse, we strive to create an inspiring community built on the principles of mutual respect, ethics, and aesthetic integrity.</p>
-        <ul class="policy-list">
-            <li>RESPECT: <span>Any forms of aggression or discrimination will be removed immediately.</span></li>
-            <li>INTELLECTUAL PROPERTY: <span>We value original creative work and expect the same from our readers.</span></li>
-            <li>AESTHETIC DIALOGUE: <span>We welcome constructive criticism that contributes to collective inspiration.</span></li>
+    <nav class="navbar">
+        <div class="logo">SAGITTARIUS MUSE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#posts">Journal</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="policy.html">Policy</a></li>
         </ul>
-        <p class="policy-footer">Sagittarius Muse is a territory of safety, high style, and intellectual pursuit.</p>
-    </div>
+    </nav>
+
+    <main class="page-container reveal active">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <header class="internal-hero">
+            <h1>Social Media Policy</h1>
+        </header>
+
+        <article class="content-body" style="text-align: center;">
+            <p>At Sagittarius Muse, we strive to create an inspiring community built on the principles of mutual respect, ethics, and aesthetic integrity.</p>
+            
+            <ul class="policy-list">
+                <li>RESPECT: <span>Any forms of aggression or discrimination will be removed immediately.</span></li>
+                <li>INTELLECTUAL PROPERTY: <span>We value original creative work and expect the same from our readers.</span></li>
+                <li>AESTHETIC DIALOGUE: <span>We welcome constructive criticism that contributes to collective inspiration.</span></li>
+            </ul>
+
+            <p class="policy-footer">Sagittarius Muse is a territory of safety, high style, and intellectual pursuit.</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">SAGITTARIUS MUSE</div>
+            <p>Curating beauty for the wild and the wise.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="policy.html">Policy</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sagittarius Muse. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
