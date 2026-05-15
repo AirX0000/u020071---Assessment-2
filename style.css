@@ -38,20 +38,18 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 5%;
+    padding: 2.5rem 8%; /* Increased padding for elegance */
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.1);
-    backdrop-filter: blur(20px); /* Glassmorphism */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    transition: var(--transition);
+    background: transparent; /* Clean start */
+    transition: all 0.5s ease;
 }
 
 .logo {
-    font-size: 1.5rem;
-    letter-spacing: 4px;
+    font-size: 1.4rem;
+    letter-spacing: 5px;
     font-weight: 600;
     color: var(--accent-color);
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    text-transform: uppercase;
 }
 
 .nav-links {
@@ -60,20 +58,23 @@ h1, h2, h3 {
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 0.9rem;
+    color: #fff;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 400;
     transition: var(--transition);
+    opacity: 0.8;
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
+    opacity: 1;
 }
 
 /* Hero Section */
@@ -95,14 +96,14 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    transform: scale(1.1); /* Subtle depth */
+    transform: scale(1);
 }
 
 .hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7) contrast(1.1);
+    filter: brightness(0.6) contrast(1.1);
 }
 
 .hero-overlay {
@@ -111,30 +112,33 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9));
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 800px;
-    padding: 0 20px;
-    transform: translateZ(50px); /* Lift from background */
+    max-width: 900px;
+    padding: 0 40px;
 }
 
 .hero-content h1 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
+    font-size: 5.5rem;
+    margin-bottom: 0.5rem;
     font-style: italic;
-    text-shadow: 0 20px 40px rgba(0,0,0,0.8);
-    letter-spacing: -2px;
+    line-height: 1.1;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin-bottom: 2.5rem;
     font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn {
