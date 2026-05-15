@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact the Muse | Sagittarius Muse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; margin-top: 4rem; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: #fff; margin-bottom: 2rem; font-family: 'Montserrat', sans-serif; border-radius: 4px; outline: none; transition: var(--transition); }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent-color); background: rgba(212, 175, 55, 0.05); }
+        .contact-info-box h3 { font-size: 1.2rem; color: var(--accent-color); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 3px; }
+        .contact-info-box p { color: #888; font-size: 1rem; margin-bottom: 3rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SAGITTARIUS MUSE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#posts">Journal</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-container reveal active">
+        <header class="internal-hero">
+            <h1>Get in Touch</h1>
+            <p style="text-transform: uppercase; letter-spacing: 5px; color: var(--accent-color); font-size: 0.8rem;">Let's create something beautiful.</p>
+        </header>
+
+        <section class="content-body">
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h3>Inquiries</h3>
+                    <p>For editorial collaborations, press features, or general inquiries, please reach out via the form or email us directly.</p>
+                    
+                    <h3>Email</h3>
+                    <p>hello@sagittariusmuse.com</p>
+
+                    <h3>Office</h3>
+                    <p>Place de la Concorde<br>75008 Paris, France</p>
+                </div>
+                <div class="contact-form">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+                    <button class="btn" style="width: 100%;">Send Message</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">SAGITTARIUS MUSE</div>
+            <p>Curating beauty for the wild and the wise.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="policy.html">Policy</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sagittarius Muse. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
