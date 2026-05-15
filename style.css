@@ -619,6 +619,15 @@ footer {
     transform: none !important;
 }
 
+.btn-full {
+    width: 100%;
+    display: block;
+}
+
+.collage-reverse {
+    grid-template-columns: 1fr 2fr !important;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hero-content h1 {
